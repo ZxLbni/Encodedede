@@ -29,27 +29,27 @@ def ffmpeg_settings(id, input, FT):
     
     if audio_type == 'opus':
         if resolutio == '480p':
-            cmd = f'ffmpeg -hide_banner -loglevel quiet -progress progress-{FT}.txt -i """{input}""" -preset {preset} -vcodec {vcodecs} -crf {crf} -s {resolution} -metadata title="Encoded By IndiAnime" -metadata:s:v title="IndiAnime - {resolutio} - {vcodec}"  -metadata:s:a title="IndiAnime" -map 0:v -c:a opus -b:a 64k -map 0:a -c:s copy -map 0:s? -strict -2 """{output}""" -y'
+            cmd = f'ffmpeg -hide_banner -loglevel quiet -progress progress-{FT}.txt -i """{input}""" -preset {preset} -vcodec {vcodecs} -crf {crf} -s {resolution} -metadata title="MXnitro" -metadata:s:v title="Mxnitro - {resolutio} - {vcodec}"  -metadata:s:a title="Mxnitrp" -map 0:v -c:a opus -b:a 64k -map 0:a -c:s copy -map 0:s? -strict -2 """{output}""" -y'
         elif resolutio == '720p':
-            cmd = f'ffmpeg -hide_banner -loglevel quiet -progress progress-{FT}.txt -i """{input}""" -preset {preset} -vcodec {vcodecs} -crf {crf} -s {resolution} -metadata title="Encoded By IndiAnime" -metadata:s:v title="IndiAnime - {resolutio} - {vcodec}"  -metadata:s:a title="IndiAnime" -map 0:v -c:a opus -b:a 128k -map 0:a -c:s copy -map 0:s? -strict -2 """{output}""" -y'
+            cmd = f'ffmpeg -hide_banner -loglevel quiet -progress progress-{FT}.txt -i """{input}""" -preset {preset} -vcodec {vcodecs} -crf {crf} -s {resolution} -metadata title="MXnitro" -metadata:s:v title="Mxnitro - {resolutio} - {vcodec}"  -metadata:s:a title="mxnitro" -map 0:v -c:a opus -b:a 128k -map 0:a -c:s copy -map 0:s? -strict -2 """{output}""" -y'
         else:
-            cmd = f'ffmpeg -hide_banner -loglevel quiet -progress progress-{FT}.txt -i """{input}""" -preset {preset} -vcodec {vcodecs} -crf {crf} -metadata title="Encoded By IndiAnime" -metadata:s:v title="IndiAnime - {resolutio} - {vcodec}"  -metadata:s:a title="IndiAnime" -map 0:v -c:a opus -b:a 256k -map 0:a -c:s copy -map 0:s? -strict -2 """{output}""" -y'
+            cmd = f'ffmpeg -hide_banner -loglevel quiet -progress progress-{FT}.txt -i """{input}""" -preset {preset} -vcodec {vcodecs} -crf {crf} -metadata title="MXNitro" -metadata:s:v title="Mxnitro - {resolutio} - {vcodec}"  -metadata:s:a title="Mxnitro" -map 0:v -c:a opus -b:a 256k -map 0:a -c:s copy -map 0:s? -strict -2 """{output}""" -y'
     
     elif audio_type == 'aac':
         if resolutio == '480p':
             cmd = f'ffmpeg -hide_banner -loglevel quiet -progress progress-{FT}.txt -i """{input}""" -preset {preset} -vcodec {vcodecs} -crf {crf} -s {resolution} -metadata title="Encoded By IndiAnime" -metadata:s:v title="IndiAnime - {resolutio} - {vcodec}"  -metadata:s:a title="IndiAnime" -map 0:v -c:a aac -b:a 64k -map 0:a -c:s copy -map 0:s? """{output}""" -y'
         elif resolutio == '720p':
-            cmd = f'ffmpeg -hide_banner -loglevel quiet -progress progress-{FT}.txt -i """{input}""" -preset {preset} -vcodec {vcodecs} -crf {crf} -s {resolution} -metadata title="Encoded By IndiAnime" -metadata:s:v title="IndiAnime - {resolutio} - {vcodec}"  -metadata:s:a title="IndiAnime" -map 0:v -c:a aac -b:a 128k -map 0:a -c:s copy -map 0:s? """{output}""" -y'
+            cmd = f'ffmpeg -hide_banner -loglevel quiet -progress progress-{FT}.txt -i """{input}""" -preset {preset} -vcodec {vcodecs} -crf {crf} -s {resolution} -metadata title="MXnitro" -metadata:s:v title="IndiAnime - {resolutio} - {vcodec}"  -metadata:s:a title="IndiAnime" -map 0:v -c:a aac -b:a 128k -map 0:a -c:s copy -map 0:s? """{output}""" -y'
         else:
-            cmd = f'ffmpeg -hide_banner -loglevel quiet -progress progress-{FT}.txt -i """{input}""" -preset {preset} -vcodec {vcodecs} -crf {crf} -metadata title="Encoded By IndiAnime" -metadata:s:v title="IndiAnime - {resolutio} - {vcodec}"  -metadata:s:a title="IndiAnime" -map 0:v -c:a aac -b:a 256k -map 0:a -c:s copy -map 0:s? """{output}""" -y'
+            cmd = f'ffmpeg -hide_banner -loglevel quiet -progress progress-{FT}.txt -i """{input}""" -preset {preset} -vcodec {vcodecs} -crf {crf} -metadata title="MXNitro" -metadata:s:v title="IndiAnime - {resolutio} - {vcodec}"  -metadata:s:a title="IndiAnime" -map 0:v -c:a aac -b:a 256k -map 0:a -c:s copy -map 0:s? """{output}""" -y'
     
     elif audio_type == 'libopus':
         if resolutio == '480p':
-            cmd = f'ffmpeg -hide_banner -loglevel quiet -progress progress-{FT}.txt -i """{input}""" -preset {preset} -vcodec {vcodecs} -crf {crf} -s {resolution} -metadata title="Encoded By IndiAnime" -metadata:s:v title="IndiAnime - {resolutio} - {vcodec}"  -metadata:s:a title="IndiAnime" -map 0:v -c:a libopus -b:a 64k -map 0:a -c:s copy -map 0:s? """{output}""" -y'
+            cmd = f'ffmpeg -hide_banner -loglevel quiet -progress progress-{FT}.txt -i """{input}""" -preset {preset} -vcodec {vcodecs} -crf {crf} -s {resolution} -metadata title="MXNitro" -metadata:s:v title="MXNitro - {resolutio} - {vcodec}"  -metadata:s:a title="MXNitro" -map 0:v -c:a libopus -b:a 64k -map 0:a -c:s copy -map 0:s? """{output}""" -y'
         elif resolutio == '720p':
-            cmd = f'ffmpeg -hide_banner -loglevel quiet -progress progress-{FT}.txt -i """{input}""" -preset {preset} -vcodec {vcodecs} -crf {crf} -s {resolution} -metadata title="Encoded By IndiAnime" -metadata:s:v title="IndiAnime - {resolutio} - {vcodec}"  -metadata:s:a title="IndiAnime" -map 0:v -c:a libopus -b:a 128k -map 0:a -c:s copy -map 0:s? """{output}""" -y'
+            cmd = f'ffmpeg -hide_banner -loglevel quiet -progress progress-{FT}.txt -i """{input}""" -preset {preset} -vcodec {vcodecs} -crf {crf} -s {resolution} -metadata title="MXNitro" -metadata:s:v title="MXNitro - {resolutio} - {vcodec}"  -metadata:s:a title="MXNitro" -map 0:v -c:a libopus -b:a 128k -map 0:a -c:s copy -map 0:s? """{output}""" -y'
         else:
-            cmd = f'ffmpeg -hide_banner -loglevel quiet -progress progress-{FT}.txt -i """{input}""" -preset {preset} -vcodec {vcodecs} -crf {crf} -metadata title="Encoded By IndiAnime" -metadata:s:v title="IndiAnime - {resolutio} - {vcodec}"  -metadata:s:a title="IndiAnime" -map 0:v -c:a libopus -b:a 256k -map 0:a -c:s copy -map 0:s? """{output}""" -y'        
+            cmd = f'ffmpeg -hide_banner -loglevel quiet -progress progress-{FT}.txt -i """{input}""" -preset {preset} -vcodec {vcodecs} -crf {crf} -metadata title="MXNitro" -metadata:s:v title="MXnitro - {resolutio} - {vcodec}"  -metadata:s:a title="MXnitro" -map 0:v -c:a libopus -b:a 256k -map 0:a -c:s copy -map 0:s? """{output}""" -y'        
     return cmd      
 
 # def ffmpeg_auto_settings(id, input, FT):
