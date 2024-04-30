@@ -4,7 +4,7 @@ from Bot import OWNER_ID, encoder, create_ubot
 from pyrogram.types import InlineKeyboardMarkup as IKM, InlineKeyboardButton as IKB
 
 # Fetch bot token from environment variables
-bot_token = os.getenv("bot_token")
+bot_token = ("6431027856:AAHxTcN5dDH-duFbW7OmTvxwwQJ8lgh4-xY")
 
 if not bot_token:
     print("Error: Bot token not found in environment variables.")
